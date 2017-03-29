@@ -1,0 +1,23 @@
+{	
+	"GoogleDrive":{ 
+		"tokenUrl":"",
+		"clientId":"",
+		"clientSecret":"" ,
+		"authorizationFormUrl":"",
+		"scopes":[]
+	},
+	"Facebook":{
+		"tokenUrl":"",
+		"clientId":"",
+		"clientSecret":"" ,
+		"authorizationFormUrl":"",
+		"scopes":[]
+	},
+	"Spotify":{
+		"tokenUrl":"",
+		"clientId":"",
+		"clientSecret":"" ,
+		"authorizationFormUrl":"",
+		"scopes":[]
+	}
+}		
