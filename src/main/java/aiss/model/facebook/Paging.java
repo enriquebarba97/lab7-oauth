@@ -4,9 +4,11 @@ package aiss.model.facebook;
 import java.io.Serializable;
 import java.util.List;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown=true)
+
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Paging implements Serializable{
    	/**
 	 * 

@@ -2,7 +2,9 @@ package aiss.model.facebook;
 
 import java.io.Serializable;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class PictureData implements Serializable{
