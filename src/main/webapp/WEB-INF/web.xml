@@ -144,6 +144,6 @@
   </servlet-mapping>
   
   <!--    Facebook OAuth Servlets -->    
-  <!--    TODO! -->
+  <!--    TODO: Completar con los 2 servlets para implementar OAuth con facebook -->
     
 </web-app>

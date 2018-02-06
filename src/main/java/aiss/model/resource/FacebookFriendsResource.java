@@ -29,13 +29,11 @@ public class FacebookFriendsResource {
 		try {
 			System.out.println(requestURI+ " *********************");			
 			cr = new ClientResource(requestURI);
-			String content=cr.get(String.class);
-			System.out.println(content);
 			list = cr.get(FacebookFriends.class);
 			
 		} catch (ResourceException re) {
 			System.err.println("Error when retrieving friends: " + cr.getResponse().getStatus());
-			System.err.println(uri + "?access_token" + access_token);
+			System.err.println(uri + "?access_token=" + access_token);
 		}
 		
 		return list;

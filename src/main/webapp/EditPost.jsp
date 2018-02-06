@@ -1,4 +1,8 @@
 <%@include file="includes/header.jsp"%>
+	<c:if test='${empty sessionScope["Facebook-token"]}'>
+	   <c:redirect url = "/AuthController/Facebook"/>
+	</c:if>
+	
 	<h1>Publicar Post en Facebook</h1>
 	<div class="container">
 	

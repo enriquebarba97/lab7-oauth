@@ -16,7 +16,7 @@ public class FacebookFriends implements Serializable{
 	 */
 	private static final long serialVersionUID = 7615830497749499027L;
 	private List<Data> data;
-   	private Paging paging;
+   	//private Paging paging;
 
  	public List<Data> getData(){
 		return this.data;
@@ -24,10 +24,10 @@ public class FacebookFriends implements Serializable{
 	public void setData(List<Data> data){
 		this.data = data;
 	}
- 	public Paging getPaging(){
+ 	/*public Paging getPaging(){
 		return this.paging;
 	}
 	public void setPaging(Paging paging){
 		this.paging = paging;
-	}
+	}*/
 }
