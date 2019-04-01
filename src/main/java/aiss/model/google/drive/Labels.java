@@ -1,12 +1,11 @@
-
 package aiss.model.google.drive;
 
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-@JsonIgnoreProperties(ignoreUnknown=true)
-public class Labels implements Serializable
-{
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Labels implements Serializable {
 
     private Boolean starred;
     private Boolean hidden;

@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HelloWorldServlet extends HttpServlet {
-	
-	private static final Logger log = Logger.getLogger(HelloWorldServlet.class.getName());
-	
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		// Sample log
-		log.log(Level.FINE, "Processing GET request");
-		 
-		resp.setContentType("text/plain");
-		resp.getWriter().println("Hello world!");
-	}
+
+    private static final Logger log = Logger.getLogger(HelloWorldServlet.class.getName());
+
+    @Override
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
+        // Sample log
+        log.log(Level.FINE, "Processing GET request");
+
+        resp.setContentType("text/plain");
+        resp.getWriter().println("Hello world!");
+    }
 }

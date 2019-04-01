@@ -1,13 +1,12 @@
-
 package aiss.model.google.drive;
 
 import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-@JsonIgnoreProperties(ignoreUnknown=true)
-public class Files implements Serializable
-{
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Files implements Serializable {
 
     private String kind;
     private String etag;

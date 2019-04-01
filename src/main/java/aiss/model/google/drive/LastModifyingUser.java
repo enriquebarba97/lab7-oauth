@@ -1,15 +1,14 @@
-
 package aiss.model.google.drive;
 
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-@JsonIgnoreProperties(ignoreUnknown=true)
-public class LastModifyingUser implements Serializable
-{
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class LastModifyingUser implements Serializable {
 
     private String kind;
-    private String displayName;    
+    private String displayName;
     private Boolean isAuthenticatedUser;
     private String permissionId;
     private String emailAddress;
