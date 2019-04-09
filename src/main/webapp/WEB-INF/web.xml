@@ -79,8 +79,38 @@
 
     <!--    TODO: Completar con los 2 servlets para implementar OAuth con Spotify -->
     <!-- SpotifyAuthController-->
+    <servlet>
+        <description/>
+        <servlet-name>SpotifyAuthController</servlet-name>
+        <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+        <init-param>
+            <param-name>provider</param-name>
+            <param-value>Spotify</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpotifyAuthController</servlet-name>
+        <url-pattern>/AuthController/Spotify</url-pattern>
+    </servlet-mapping>
         <!--ToDo-->
     <!--SpotifyOAuth2Callback-->
+    <servlet>
+        <description/>
+        <servlet-name>SpotifyOAuth2Callback</servlet-name>
+        <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+        <init-param>
+            <param-name>provider</param-name>
+            <param-value>Spotify</param-value>
+        </init-param>
+        <init-param>
+            <param-name>onSuccess</param-name>
+            <param-value>redirect:/spotifyPlaylistsGet</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpotifyOAuth2Callback</servlet-name>
+        <url-pattern>/oauth2callback/Spotify</url-pattern> 
+    </servlet-mapping>
         <!--ToDo-->
     
     <!--   GoogleDrive oAuth2 servlets    -->

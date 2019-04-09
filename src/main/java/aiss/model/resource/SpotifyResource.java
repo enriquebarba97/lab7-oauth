@@ -1,10 +1,12 @@
 package aiss.model.resource;
 
+import aiss.model.spotify.NewPlaylist;
 import aiss.model.spotify.Playlists;
 import aiss.model.spotify.UserProfile;
 import java.util.logging.Logger;
 import org.restlet.data.ChallengeResponse;
 import org.restlet.data.ChallengeScheme;
+import org.restlet.data.MediaType;
 import org.restlet.resource.ClientResource;
 import org.restlet.resource.ResourceException;
 
@@ -45,16 +47,26 @@ public class SpotifyResource {
         if (userId != null && !name.trim().isEmpty()) {
 
             // ToDo: create post URL (you'll need the userId)
+        	String uri = baseURL + "/users/" + userId + "/playlists";
             // ToDo: create properly the ClientResource and the ChallengeResponse
-            // ToDo: create the NewPlaylist object and set the properties 
+        	ClientResource cr = new ClientResource(uri);
+        	 ChallengeResponse chr = new ChallengeResponse(ChallengeScheme.HTTP_OAUTH_BEARER);
+             chr.setRawValue(access_token);
+             cr.setChallengeResponse(chr);
+            // ToDo: create the NewPlaylist object and set the properties
+        	NewPlaylist playlist = new NewPlaylist();
+        	playlist.setName(name);
+        	playlist.setDescription(description);
             // ToDo: pprint useful log information
+        	log.info("Creating the playlist " + playlist.getName());
 
             try {
-                // ToDo: call the ClientResource post method with the proper values
+                cr.post(playlist, MediaType.APPLICATION_ALL_JSON);
                 return true;
 
             } catch (ResourceException re) {
                 // ToDo: print useful log information before returning
+            	log.warning("Error when creating a Spotify playlist: " + cr.getResponse().getStatus());
                 return false;
             }
         } else {
