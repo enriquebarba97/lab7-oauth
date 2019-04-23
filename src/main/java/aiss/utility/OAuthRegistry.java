@@ -64,7 +64,7 @@ public class OAuthRegistry {
 
         // Set scopes		
         flowBuilder.setScopes(scopes);
-
+        
         return flowBuilder.build();
     }
 

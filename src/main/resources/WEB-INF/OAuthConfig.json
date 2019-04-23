@@ -12,5 +12,12 @@
         "clientSecret": "7af9a6149d7a4f4392518c4f24124d80",
         "authorizationFormUrl": "https://accounts.spotify.com/authorize",
         "scopes": ["playlist-read-private","playlist-modify-private"]
+    },
+    "Reddit": {
+    	"tokenUrl": "https://www.reddit.com/api/v1/access_token",
+        "clientId": "wvw_SRbJFupemw",
+        "clientSecret": "J5u4MlUdzb15OLiSpoGxwsrjnE8",
+        "authorizationFormUrl": "https://www.reddit.com/api/v1/authorize?state=xyz",
+        "scopes": ["identity"]
     }
 }		

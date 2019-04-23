@@ -15,6 +15,7 @@
             <li><a href="/googleDriveFileList">Listado de ficheros de Google Drive</a></li>
             <li><a href="/spotifyPlaylistsGet">Obtener playlists de Spotify</a></li>
             <li><a href="/spotifyPlaylistNew">Creación de playlist en Spotify</a></li>
+            <li><a href="/redditUser">Usuario de Reddit</a></li>
         </ul>
 
         <h2> Tokens de OAuth </h2>
@@ -27,6 +28,12 @@
             <li><strong>Spotify:</strong>
                 <ul>
                     <li><c:out value='${sessionScope["Spotify-token"]}' /> </li>
+                </ul>
+            </li>
+            <li><strong>Reddit:</strong>
+                <ul>
+                    <li><c:out value='${sessionScope["Reddit-token"]}' /> </li>
+                    <li><c:out value='${sessionScope["Reddit-expires"]}' /> </li>
                 </ul>
             </li>
         </ul>
